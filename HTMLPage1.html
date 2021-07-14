@@ -1,47 +1,55 @@
 ﻿<!doctype html>
 <head>
-
+    <link rel="stylesheet" href="./styles.css">
     <!--Ignore the code contained within the SCRIPT tags-->
     <script>
-function setSearchEngine() {
+        function setSearchEngine() {
 
-                let actions = {
-                    "google": "https://www.google.com/search",
-                    "duckduckgo": "https://duckduckgo.com/",
-                    "bing": "https://www.bing.com/search",
-                    "ask": "https://www.ask.com/web"
-                };
+            let actions = {
+                "google": "https://www.google.com/search",
+                "duckduckgo": "https://duckduckgo.com/",
+                "bing": "https://www.bing.com/search",
+                "ask": "https://www.ask.com/web"
+            };
 
-                let form = document.getElementById('searchForm');
-                let selectedEngine = document.querySelector('[name=engine]:checked');
-                let action = actions[selectedEngine.value];
-                form.setAttribute('action', action);
-            }
+            let form = document.getElementById('searchForm');
+            let selectedEngine = document.querySelector('[name=engine]:checked');
+            let action = actions[selectedEngine.value];
+            form.setAttribute('action', action);
+        }
 
-            window.addEventListener('load', function () {
-                let form = document.getElementById('searchForm');
-                form.addEventListener('submit', setSearchEngine);
-            });
+        window.addEventListener('load', function () {
+            let form = document.getElementById('searchForm');
+            form.addEventListener('submit', setSearchEngine);
+        });
 
-            /*The JavaScript contained within these <script> tags is
-             * what causes the input of the form to update the browser window once the user clicks "Go!" */
+        /*The JavaScript contained within these <script> tags is
+         * what causes the input of the form to update the browser window once the user clicks "Go!" */
 
     </script>
 </head>
 <body>
+
+    <img src="Images/hubnew.png" />
+    <br />
     <form id="searchForm" method="get">
 
         <!--Create your form here!-->
-        <form method="post" action=""/>
-        <label>What would you like to search for?<input type="text" name="q" /></label>
-        <label>Google<input type="radio" name="engine" value="google" /></label>
-        <label>DuckDuckGo<input type="radio" name="engine" value="duckduckgo" /></label>
-        <label>Bing<input type="radio" name="engine" value="bing" /></label>
-        <label>Ask<input type="radio" name="engine" value="ask" /></label>
+        <form method="post" action="" />
+        <label><b>What would you like to search for</b>?<input type="text" name="q" /></label>
         <br />
-        <button type="submit" name="search" value="Go!">Go!</button>
+        <p><b>Using which engine:</b></p>
+        <label class="engine"><b>Google</b><input type="radio" name="engine" value="google" /></label>
+        <label class="engine"><b>DuckDuckGo</b><input type="radio" name="engine" value="duckduckgo" /></label>
+        <label class="engine"><b>Bing</b><input type="radio" name="engine" value="bing" /></label>
+        <label class="engine"><b>Ask</b><input type="radio" name="engine" value="ask" /></label>
+        <br />
+        <br />
+        <button id="button" type="submit" name="search" value="Go!">Go!</button>
 
 
 
     </form>
+    <br />
+    <img src="Images/search-engines.png" width="500" height="200"/>
 </body>
