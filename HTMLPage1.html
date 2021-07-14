@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<head>
+
+    <!--Ignore the code contained within the SCRIPT tags-->
+    <script>
+function setSearchEngine() {
+
+                let actions = {
+                    "google": "https://www.google.com/search",
+                    "duckduckgo": "https://duckduckgo.com/",
+                    "bing": "https://www.bing.com/search",
+                    "ask": "https://www.ask.com/web"
+                };
+
+                let form = document.getElementById('searchForm');
+                let selectedEngine = document.querySelector('[name=engine]:checked');
+                let action = actions[selectedEngine.value];
+                form.setAttribute('action', action);
+            }
+
+            window.addEventListener('load', function () {
+                let form = document.getElementById('searchForm');
+                form.addEventListener('submit', setSearchEngine);
+            });
+
+            /*The JavaScript contained within these <script> tags is
+             * what causes the input of the form to update the browser window once the user clicks "Go!" */
+
+    </script>
+</head>
+<body>
+    <form id="searchForm">
+
+        <!--Create your form here!-->
+        <label>What would you like to search for?<input type="text" name="q" /></label>
+        <label>Google<input type="radio" name="engine" value="google" /></label>
+        <label>DuckDuckGo<input type="radio" name="engine" value="duckduckgo" /></label>
+        <label>Bing<input type="radio" name="engine" value="bing" /></label>
+        <label>Ask<input type="radio" name="engine" value="ask" /></label>
+        <br />
+        <button type="button" name="search" value="Go!">Submit</button>
+
+
+
+    </form>
+</body>
