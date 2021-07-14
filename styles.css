@@ -1,6 +1,6 @@
-﻿body
-{
-    background-image: url(Images/nyc.jpg)
+﻿body {
+    margin: 25px 50px 75px 100px;
+    background-image: url(Images/nyc.jpg);
 }
 
 .engine
@@ -11,4 +11,41 @@
 #button
 {
     background-color: lawngreen;
+}
+
+#banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#google
+{
+    color: limegreen;
+}
+
+#duck
+{
+    color: red;
+}
+
+#bing
+{
+    color: darkorange;
+}
+
+#ask
+{
+    color: rebeccapurple;
+}
+
+#using
+{
+    font-size: 28px;
+}
+
+#searchfor
+{
+    font-size: 30px;
 }

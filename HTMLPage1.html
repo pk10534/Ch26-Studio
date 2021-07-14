@@ -30,19 +30,19 @@
 </head>
 <body>
 
-    <img src="Images/hubnew.png" />
+    <img id="banner" src="Images/hubnew.png" />
     <br />
     <form id="searchForm" method="get">
 
         <!--Create your form here!-->
         <form method="post" action="" />
-        <label><b>What would you like to search for</b>?<input type="text" name="q" /></label>
+        <label id="searchfor"><b>What would you like to search for</b>?<input type="text" name="q" /></label>
         <br />
-        <p><b>Using which engine:</b></p>
-        <label class="engine"><b>Google</b><input type="radio" name="engine" value="google" /></label>
-        <label class="engine"><b>DuckDuckGo</b><input type="radio" name="engine" value="duckduckgo" /></label>
-        <label class="engine"><b>Bing</b><input type="radio" name="engine" value="bing" /></label>
-        <label class="engine"><b>Ask</b><input type="radio" name="engine" value="ask" /></label>
+        <p id="using"><b>Using which engine:</b></p>
+        <label id="google" class="engine"><b>Google</b><input type="radio" name="engine" value="google" /></label>
+        <label id="duck" class="engine"><b>DuckDuckGo</b><input type="radio" name="engine" value="duckduckgo" /></label>
+        <label id="bing"class="engine"><b>Bing</b><input type="radio" name="engine" value="bing" /></label>
+        <label id="ask" class="engine"><b>Ask</b><input type="radio" name="engine" value="ask" /></label>
         <br />
         <br />
         <button id="button" type="submit" name="search" value="Go!">Go!</button>
@@ -51,5 +51,5 @@
 
     </form>
     <br />
-    <img src="Images/search-engines.png" width="500" height="200"/>
+    <img src="Images/newengines.jpg" width="500" height="300"/>
 </body>
