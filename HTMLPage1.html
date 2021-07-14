@@ -29,16 +29,17 @@ function setSearchEngine() {
     </script>
 </head>
 <body>
-    <form id="searchForm">
+    <form id="searchForm" method="get">
 
         <!--Create your form here!-->
+        <form method="post" action=""/>
         <label>What would you like to search for?<input type="text" name="q" /></label>
         <label>Google<input type="radio" name="engine" value="google" /></label>
         <label>DuckDuckGo<input type="radio" name="engine" value="duckduckgo" /></label>
         <label>Bing<input type="radio" name="engine" value="bing" /></label>
         <label>Ask<input type="radio" name="engine" value="ask" /></label>
         <br />
-        <button type="button" name="search" value="Go!">Submit</button>
+        <button type="submit" name="search" value="Go!">Go!</button>
 
 
 
